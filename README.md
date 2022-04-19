@@ -1,3 +1,4 @@
 # Actividad node 
-
-Actividad NodeJs MariaDB eshop Bootstrap Nodejs 2022 Enero - Junio
+Alejandro Cedillo Gamez
+a00824742
+Actividad NodeJs MariaDB eshop Bootstrap Nodejs Enero - Junio 2022
