@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Practica NodeJs</title>
+</head>
+<body>
+    <div>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"/>
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4-4.6.0/jq-3.6.0/dt-1.11.5/r-2.2.9/datatables.min.css"/>
+       
+      <script type="text/javascript" src="https://cdn.datatables.net/v/bs4-4.6.0/jq-3.6.0/dt-1.11.5/r-2.2.9/datatables.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+<h2 class="text-center" style="padding: 1%;">Categorías de la eshop</h2>
+    <table border="1" class="table table-striped table-bordered" style="width:100%">
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Date_upd</th>
+            <th>Date_add</th>
+            <th>Active</th>
+            <th>Level_depth</th>
+            <th>ID_shop_default</th>
+            <th>ID_parent</th>
+            <th>ID_category</th>
+        </tr>
+        
+        <%
+        if(userData.length!=0){
+        var i=1;
+        userData.forEach(function(data){
+        %>
+        <tr>
+            <td><%=i; %></td>
+            <td><%=data.name %></td>
+            <td><%=data.date_upd %></td>
+            <td><%=data.date_add %></td>
+            <td><%=data.active %></td>
+            <td><%=data.level_depth %></td>
+            <td><%=data.id_shop_default %></td>
+            <td><%=data.id_parent %></td>
+            <td><%=data.id_category %></td>
+
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    </div>
+</body>
+</html>
